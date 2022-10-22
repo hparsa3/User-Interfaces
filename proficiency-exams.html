@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en-fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--BootStrap Icon Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!--Local CSS-->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Proficiency Exams</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="/v1/images/Favicon.png">
+
+      <!--Scripts COnections-->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.map"></script>
+      <script src="/v1/script/main.js"></script>
+  
+      <script>
+  
+          window.addEventListener('load', calculate);
+  
+      </script>
+
+<body>
+    <!-- Main Nav-->
+    <header class="shadow">
+        <nav class="navbar navbar-expand-lg navbar-light header-background-color fs-4">
+            <div class="container">
+                   <!-- clocl Start-->
+                   <div id="clock">
+                    <div id="second-pointer"></div>
+                    <div id="minute-pointer"></div>
+                    <div id="hour-pointer"></div>
+                    <div id="center"></div>
+                </div>
+                <!-- clocl end-->
+
+
+                <img class="logo " src="./images/logo.png" alt="logo" title="logo" height="100" width="200">
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Cources
+                            </a>
+                            <ul class="dropdown-menu fs-4 mt-0 " aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/v1/general-english.html">General English</a></li>
+                                <li><a class="dropdown-item" href="/v1/proficiency-exams.html">Proficiency Exams</a></li>
+                                <li><a class="dropdown-item" href="/v1/conversation.html">Conversation Classes</a></li>
+                                <li><a class="dropdown-item" href="/v1/academic-writing.html">Academic Writing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" tabindex="-1">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" tabindex="-1">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/v1/registration.html" tabindex="-1">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="mt-4 proficiency-exams-bg">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-md-6 mt-2">
+                    <h4 class="fw-bold">Proficiency Exams</h4>
+
+                    <p class="fs-5">
+                    Tired of taking your exam over and over again?
+                    Not sure why you keep getting a low band score?
+                    Feeling lost before you take your first test?
+                    Save yourself time and stress! Count on our team of certified Canadian exam experts to help you
+                    finally pass your IELTS or CELPIP exam.
+                    </p>
+
+                </div>
+                <div class="col-md-6 mt-2 mt-md-0 mb-2">
+                    <img class="img-fluid" src="./images/proficiency-exams.jpg" alt="header image" title="header image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Wave-->
+    <div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #f8f9fa;">
+            </path>
+        </svg>
+    </div>
+
+
+
+ <!-- *********************Calc start************************-->
+
+
+
+ <div class="row text-center">
+    <h4 class="fw-bold mb-4 fs-3">Calculate Yout Tuition</h4>
+    <p class="fs-5">Here you can calculate your tuition based on your selected course, level of experience and
+        hours.</p>
+</div>
+<section class="proficiency-exams-bg">
+    <div class="container">
+        
+        <div class="row  align-items-center py-5  ">
+
+
+            <table onchange="calculate();">
+                <div class="col-md-12">
+                    <tr>
+                        <td class="labelcell mb-3 fs-4"> Course Name</td>
+
+
+                        <td class="inputcell fs-4 " style="border-radius:5px;">
+                            <select name="ddlCources" id="ddlCources" class="mb-3">
+                                <option class="fs-4 form-control" value="0">Select Your Course</option>
+                                <option class="fs-4 form-control" value="30">General English</option>
+                                <option class="fs-4 form-control" value="35">proficiency Exams</option>
+                                <option class="fs-4 form-control" value="30">Conversation Class</option>
+                                <option class="fs-4 form-control" value="35">Academic Writing</option>
+
+                            </select>
+
+
+                        </td>
+
+                    </tr>
+
+                </div>
+                
+
+                <tr>
+                    <td class="labelcell fs-4 ">Experience Level</td>
+
+                    <td class="inputcell fs-4">
+                        <select name="ddlLevels" id="ddlLevels" class="mb-3">
+                            <option value="0">Select Your level</option>
+                            <option value="0">Beginner</option>
+                            <option value="5">Intermediate</option>
+                            <option value="10">Upper Intermediate</option>
+                            <option value="15">Advanced</option>
+
+                        </select>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelcell fs-4  ">How Many Hours</td>
+
+                    <td class="inputcell fs-4 ">
+
+                        <input class="num mb-3" id="txtHours" size="7" value="0" />
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="labelcell fs-4">Payale</td>
+                    <td class="inputcell fs-4">
+                        <input class="num mb-3" id="txtTotal" size="7" value="0.00" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="labelcell fs-4">Course Material</td>
+                    <td >
+                        <img src="#" alt="" id="resource">
+                    </td>
+
+                </tr>
+
+
+
+            </table>
+
+
+        </div>
+    </div>
+</section>  
+
+
+
+<div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+style="height: 100%; width: 100%;">
+<path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
+    style="stroke: none; fill: #f8f9fa;">
+</path>
+</svg>
+</div>
+<!--*********************calc End**********************-->
+    <!--Current Deals-->
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                <h4 class="fw-bold mb-4">Promotions</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet temporibus minus libero fugiat aliquid
+                    sapiente consequuntur a nulla, doloribus sit.</p>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card shadow text-center proficiency-exams-bg py-5">
+                        <div class="card-body">
+                            <i class="bi bi-currency-dollar icon fs-2 mb-4"></i>
+                            <p class="card-title fw-bold mb-4">Intermediate</p>
+                            <p class="card-title fw-bold mb-4">$ 250</p>
+                            <p class="card-text "> 20 Hours</p>
+                            <button class="btn btn-outline-light mt-4">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--&&&&&&&&&&&&&&-->
+    <!--*****map*****-->
+    <section class="mt-4 mb-4" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2>Opening Hours</h2><br>
+                <p>MON - 9:00AM 5:00PM</p>
+                <p>TUE - 9:00AM 5:00PM</p>
+                <p>WED - 9:00AM 5:00PM</p>
+                <p>THU - 9:00AM 5:00PM</p>
+                <p>FRI - 9:00AM 5:00PM</p>
+                <p>SAT - Closed</p>
+                <p>SUN - Closed</p>
+                <p><small>Address: 3333 Boulevard Cavendish
+                        Montréal, QC H4B 2M5
+                        Canada</small></p>
+                <p>Call Us: +1 514 999-11111</p>
+            </div>
+
+            <div class="z-depth-1-half map-container" style="height: 500px">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981518.9525264865!2d-75.86599123501966!3d43.133096619551004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9112c08b7c149%3A0x21e67a34fb6b260b!2sMillennium-Academy!5e0!3m2!1sen!2sca!4v1651261186788!5m2!1sen!2sca"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--*****map end*****-->
+
+    <footer class="bg-light mt-4">
+        <div class="container pb-4">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h3 class="fw-bold" id="about">Millennium ACademy</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis aliquid et ratione.
+                    </p>
+                    <i class="bi bi-instagram fs-2"></i>
+                    <i class="bi bi-telegram fs-2 mx-3"></i>
+                    <i class="bi bi-facebook fs-2 me-3"></i>
+                    <i class="bi bi-linkedin fs-2"></i>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6 class="fw-bold footer-header w-75">Sections</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="footer-link" href="#">Main Page</a>
+                                </li>
+                                <li class="my-2">
+                                    <a class="footer-link" href="#">Cources</a>
+                                </li>
+                                <li>
+                                    <a class="footer-link" href="#">Galery</a>
+                                </li>
+                                <li class="mt-2">
+                                    <a class="footer-link" href="#">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="fw-bold footer-header w-75">Cources </h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="footer-link" href="generel-english.html"> General English</a>
+                                </li>
+                                <li class="my-2">
+                                    <a class="footer-link" href="proficiency-exams.html"> Proficiency Exams </a>
+                                </li>
+                                <li>
+                                    <a class="footer-link" href="conversation.html">Conversation Classes </a>
+                                </li>
+                                <li class="mt-2">
+                                    <a class="footer-link" href="academic-writing.html">Academic Witing </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="fw-bold footer-header w-75">About US</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="footer-link" href="#">Contact us</a>
+                                </li>
+                                <li class="my-2">
+                                    <a class="footer-link" href="#">Customer Reviews</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-top">
+            <i class="bi bi-arrow-up-circle " ></i>
+        </div>
+    </footer>
+
+    <!--****************************************Script************************************-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="/v1/script/main.js"></script>
+
+</body>
+
+</html>

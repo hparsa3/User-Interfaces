@@ -1,0 +1,9 @@
+<div class="card shadow text-center card-primary py-5"  style="margin-left:400px; background-color:#0d6efd ; color: white; border-radius: 10px; border: 0px;" >
+                        <div class="card-body">
+                        
+                            <p class="card-title fw-bold mb-2" style="font-size:30px;">Message Sent</p>
+                            
+<iframe src="https://giphy.com/embed/Sr2ckS7HE6nomK0j6z" width="240" height="135" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/OutsideTV-send-it-outsidetv-otv-Sr2ckS7HE6nomK0j6z">via GIPHY</a></p>
+
+                            
+                        </div>

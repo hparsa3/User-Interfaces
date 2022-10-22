@@ -1,0 +1,214 @@
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/*****Icon Properties****/
+.icon {
+    color: #0d6efd;
+    background-color: #ebeafb;
+    display: inline-flex;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card-primary {
+    background: lightseagreen;
+    color: white !important;
+}
+
+.bg-main {
+    background-color: 	#198754;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #000;
+}
+.footer-header {
+    border-bottom: 3px solid;
+    height: 35px;
+}
+
+.footer-link:hover {
+    color: #000;
+}
+
+.white-color-font{
+    color: white;
+}
+
+.general-english-bg{
+    
+    background: linear-gradient(to left, #43cea2 , #185a9d);
+    color: white;
+
+}
+
+.proficiency-exams-bg{
+background: linear-gradient(to left, #aa076b , #61045f);
+color: white;
+
+}
+.conversation-bg{
+background: linear-gradient(to left, #614385    , #516395);
+color: white;
+
+}
+
+.academic-writing-bg{
+background: linear-gradient(to left, #000428   , #004e92);
+color: white;
+
+}
+
+.header-background-color{
+    background-color: #9ee1c1;
+}
+
+
+/****Map****/
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
+
+
+/****Ma end****/
+/* yello fill*/
+input:focus, textarea:focus {
+
+    background-color:lightgreen;
+
+    font-size: 1rem;
+
+}
+/* yello fill end*/
+
+
+.cources-background-color{
+    background-color: #0dcaf0;
+}
+
+/*******************/
+.labelcell{
+    text-align: center;
+}
+
+.labelcell2 {
+	color: white; 
+	text-align: right; 
+	vertical-align: bottom;
+}
+
+/**********scrool top start****************/
+.scroll-top {
+    background-color:orange;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 9999;
+    text-align: center; 
+  }
+  
+  .scroll-top:hover {
+    cursor: pointer;
+  }
+  
+  .scroll-top i {
+    padding-top: 10px;
+    font-size: 30px;
+  }
+/**********scrool top end****************/
+
+/**********Clock Start****************/
+#clock{
+    width:100px;
+    height: 100px;
+    border: 4px solid black;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    background-image:url("/v1/images/cloclbg.jpg");
+    background-size: cover;
+}
+
+
+#hour-pointer{
+    width: 2px;
+    height: 25px;
+    background-color: #222;
+    border-radius: 30px;
+    position: absolute;
+    left: 47px;
+    top: calc(147px - 125px);
+    transform-origin: bottom;
+    
+}
+
+#minute-pointer{
+    width: 2px;
+    height: 30px;
+     background-color: #222;
+    border-radius: 30px;
+    position: absolute;
+    left: 46px;
+    top: calc(240px - 225px);
+    transform-origin: bottom;
+}
+
+#second-pointer{
+    width: 2px;
+    height: 35px;
+    background-color: red;
+    border-radius: 30px;
+    position: absolute;
+    left:calc(50px - 3.5px);;
+    top:calc(236px - 225px);
+    transform-origin: bottom;
+}
+
+#center{
+    width: 5px;
+    height: 5px;
+    background-color: #222;
+    border-radius: 50%;
+    position:absolute;
+    left: calc(52px - 7.5px);
+    top: calc(50px - 7.5px);
+}
+
+
+
+/**********Clock End****************/
+
+
+
+/**********footer result start****************/
+#foot
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+/**********footer result end****************/
+
